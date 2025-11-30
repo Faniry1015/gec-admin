@@ -8,6 +8,7 @@ import {
 } from "firebase/firestore";
 import { db } from "./firebase-config";
 import Footer from "./components/footer";
+import gecLogo from "./assets/gec_logo.png";
 
 type User = {
   id: string;
@@ -151,9 +152,21 @@ function App() {
   return (
     <>
     <div style={{ padding: "24px", fontFamily: "Inter, sans-serif" }}>
-      <h1 style={{ marginBottom: "16px" }}>
-        Gestion des abonnements - GEC APP
-      </h1>
+      <header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: 16,
+        }}
+      >
+        <img
+          src={gecLogo}
+          alt="Logo GEC"
+          style={{ height: 48, width: 48, objectFit: "contain" }}
+        />
+        <h1 style={{ margin: 0 }}>Gestion des abonnements - GEC APP</h1>
+      </header>
 
       <div style={{ marginBottom: "12px" }}>
         <label style={{ display: "block", fontWeight: 600, marginBottom: 6 }}>
